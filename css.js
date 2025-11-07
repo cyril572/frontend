@@ -55,7 +55,7 @@ x.addEventListener('click',()=>{
 
 // script.js
 
-const apiURL = "https://mocki.io/v1/5b24a48c-c423-40df-aa9a-5f03c39d8169"; // <-- replace with your real Mocki URL
+const apiURL = "https://mocki.io/v1/66676a30-6815-4095-a579-9fabaa2b9190"; // <-- replace with your real Mocki URL
 let questions = [];
 let currentIndex = 0;
 let score = 0;
