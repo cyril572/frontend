@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Church Login</title>
+<style>
+  body { background:#1c1c1c; color:white; font-family:Arial; display:flex; justify-content:center; align-items:center; height:100vh; }
+  .container { background:#2c2c2c; padding:30px; border-radius:8px; width:300px; text-align:center; }
+  input, button { width:90%; padding:10px; margin:10px 0; border-radius:5px; border:none; }
+  button { background:#ff6b01; color:white; cursor:pointer; }
+  .error { color:#ff4b4b; }
+  a { color:#ff6b01; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button id="loginBtn">Login</button>
+  <p class="error" id="error"></p>
+  <p>New member? <a href="sign.html">Sign Up</a></p>
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script>
+window.onload = () => {
+  const firebaseConfig = {
+     apiKey: "AIzaSyBBUldf1dQ0ZJwOa--zL4YoiCHQ5ke1m7k",
+    authDomain: "cyril-nnaemeka.firebaseapp.com",
+    projectId: "cyril-nnaemeka",
+    storageBucket: "cyril-nnaemeka.firebasestorage.app",
+    messagingSenderId: "848219396220",
+    appId: "1:848219396220:web:24b1104e49cd7f1df311f9",
+    measurementId: "G-R7JK9B6HEC"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  const loginBtn = document.getElementById("loginBtn");
+  const errorEl = document.getElementById("error");
+
+  loginBtn.addEventListener("click", () => {
+    errorEl.textContent = "";
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then(cred => {
+        localStorage.setItem("loggedInMember", JSON.stringify({uid:cred.user.uid, email:cred.user.email}));
+        window.location.href = "home.html";
+      })
+      .catch(err => { errorEl.textContent = err.message; });
+  });
+};
+</script>
+
+</body>
+</html>

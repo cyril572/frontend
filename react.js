@@ -17,44 +17,6 @@ x.addEventListener('click',()=>{
 })
 
 
-
-// const apiURL =  "https://mocki.io/v1/5b24a48c-c423-40df-aa9a-5f03c39d8169"; // replace with your API link
-// let questions = [];
-// let currentIndex = 0;
-
-// // Fetch CSS questions from API
-// async function loadQuestions() {
-//   try {
-//     const response = await fetch(apiURL);
-//     questions = await response.json();
-//     showQuestion();
-//   } catch (error) {
-//     document.getElementById("question").innerText = "Error loading questions!";
-//     console.error(error);
-//   }
-// }
-
-// // Display the current question
-// function showQuestion() {
-//   const questionBox = document.getElementById("question");
-//   if (currentIndex < questions.length) {
-//     questionBox.textContent = questions[currentIndex].question;
-//   } else {
-//     questionBox.textContent = "🎉 You’ve reached the end!";
-//   }
-// }
-
-// // Show next question when button is clicked
-// document.getElementById("nextBtn").addEventListener("click", () => {
-//   currentIndex++;
-//   showQuestion();
-// });
-
-// // Load questions on page start
-// loadQuestions();
-
-// script.js
-
 const apiURL = "https://mocki.io/v1/c15e035e-77b4-4bbe-bf5f-aad4448f8c2f"; // <-- replace with your real Mocki URL
 let questions = [];
 let currentIndex = 0;
@@ -86,7 +48,7 @@ function showQuestion() {
   if (!questionBox || !optionsBox) {
     console.error("Required DOM elements (#question or #options) not found.");
     return;
-  }
+  } 
 
   if (currentIndex < questions.length) {
     const q = questions[currentIndex];

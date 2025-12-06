@@ -1,260 +1,96 @@
- let a=document.getElementById("first")
- let b=document.getElementById("second")
- let c=document.getElementById("third")
- let d=document.getElementById("forth")
- a.addEventListener("click",()=>{
-   b.innerText="THE CORRECT ANSWER IS B"
-   c.innerText="WRONG"
-   d.innerText="WRONG"
-   a.innerText="WRONG"
- })
- b.addEventListener("click",()=>{
-    b.innerText="THE CORRECT ANSWER IS B"
-   c.innerText="WRONG"
-   d.innerText="WRONG"
-   a.innerText="WRONG"
- })
- c.addEventListener("click",()=>{
-    b.innerText="THE CORRECT ANSWER IS B"
-   c.innerText="WRONG"
-   d.innerText="WRONG"
-   a.innerText="WRONG"
- })
- d.addEventListener("click",()=>{
-    b.innerText="THE CORRECT ANSWER IS B"
-   c.innerText="WRONG"
-   d.innerText="WRONG"
-   a.innerText="WRONG"
- })
-
-
-
-
-let e=document.getElementById("one")
- let f=document.getElementById("two")
- let g=document.getElementById("three")
- let h=document.getElementById("four")
- f.addEventListener("click",()=>{
-    
-    f.innerText="WRONG"
-    g.innerText="THE CORRECT ANSWER IS C"
-    h.innerText="WRONG"
-    e.innerText="WRONG"
- })
- e.addEventListener("click",()=>{
-    
-    f.innerText="WRONG"
-    g.innerText="THE CORRECT ANSWER IS C"
-    h.innerText="WRONG"
-    e.innerText="WRONG"
- })
- h.addEventListener("click",()=>{
+//  let x=document.getElementById("dark")
+//   let y=  document.getElementById("light")
+//   let z=document.getElementById("change")
+//   let p=document.getElementById("wee")
   
-    f.innerText="WRONG"
-    g.innerText="THE CORRECT ANSWER IS C"
-    h.innerText="WRONG"
-    e.innerText="WRONG"
- })
-
- g.addEventListener("click",()=>{
+// x.addEventListener('click',()=>{
+//     document.body.classList.toggle("black")
+//     if(document.body.classList.contains("black")){
+//         z.innerText="light mode"
+//         p.src="star-fill (1).svg"
+//     }
+//     else{
+//         z.innerText="dark mode"
+//         p.src="emoji-sunglasses.svg"
+//     }
   
-    f.innerText="WRONG"
-    g.innerText="THE CORRECT ANSWER IS C"
-    h.innerText="WRONG"
-    e.innerText="WRONG"
- })
+// })
 
 
 
+const apiURL ="https://mocki.io/v1/b9988a41-23e6-45fb-a525-576c28a05ae3"; // <-- replace with your real Mocki URL
+let questions = [];
+let currentIndex = 0;
+let score = 0;
 
- let i=document.getElementById("five")
- let j=document.getElementById("six")
- let k=document.getElementById("seven")
- let l=document.getElementById("eight")
- i.addEventListener("click",()=>{
-    
-    i.innerText="WRONG"
-    j.innerText="THE CORRECT ANSWER IS B"
-    k.innerText="WRONG"
-    l.innerText="WRONG"
- })
- j.addEventListener("click",()=>{
-    
-    i.innerText="WRONG"
-    j.innerText="THE CORRECT ANSWER IS B"
-    k.innerText="WRONG"
-    l.innerText="WRONG"
- })
- k.addEventListener("click",()=>{
-    
-    i.innerText="WRONG"
-    j.innerText="THE CORRECT ANSWER IS B"
-    k.innerText="WRONG"
-    l.innerText="WRONG"
- })
- l.addEventListener("click",()=>{
-    
-    i.innerText="WRONG"
-    j.innerText="THE CORRECT ANSWER IS B"
-    k.innerText="WRONG"
-    l.innerText="WRONG"
-
- })
-
- let m=document.getElementById("nine")
- let n=document.getElementById("ten")
- let o=document.getElementById("eleven")
- let q=document.getElementById("twelve")
- m.addEventListener("click",()=>{
-    
-    n.innerText="WRONG"
-    m.innerText="THE CORRECT ANSWER IS A"
-    o.innerText="WRONG"
-    q.innerText="WRONG"
-
- })
-
- n.addEventListener("click",()=>{
-    
-    n.innerText="WRONG"
-    m.innerText="THE CORRECT ANSWER IS A"
-    o.innerText="WRONG"
-    q.innerText="WRONG"
-
- })
- o.addEventListener("click",()=>{
-    
-    n.innerText="WRONG"
-    m.innerText="THE CORRECT ANSWER IS A"
-    o.innerText="WRONG"
-    q.innerText="WRONG"
-
- })
- q.addEventListener("click",()=>{
-    
-    n.innerText="WRONG"
-    m.innerText="THE CORRECT ANSWER IS A"
-    o.innerText="WRONG"
-    q.innerText="WRONG"
-
- })
- 
-
- let r=document.getElementById("thirteen")
- let s=document.getElementById("forteen")
- let t=document.getElementById("fiftheen")
- let u=document.getElementById("sixteen")
- r.addEventListener("click",()=>{
-    
-    r.innerText="WRONG"
-    s.innerText="WRONG"
-    t.innerText="WRONG"
-    u.innerText="THE CORRECT ANSWER IS D"
-
- })
-
- s.addEventListener("click",()=>{
-    
-     r.innerText="WRONG"
-    s.innerText="WRONG"
-    t.innerText="WRONG"
-    u.innerText="THE CORRECT ANSWER IS D"
-
-
- })
- t.addEventListener("click",()=>{
-    
-    r.innerText="WRONG"
-    s.innerText="WRONG"
-    t.innerText="WRONG"
-    u.innerText="THE CORRECT ANSWER IS D"
-
-
- })
- u.addEventListener("click",()=>{
-    
-    r.innerText="WRONG"
-    s.innerText="WRONG"
-    t.innerText="WRONG"
-    u.innerText="THE CORRECT ANSWER IS D"
-
-
- })
-
- 
- let v=document.getElementById("seventeen")
- let w=document.getElementById("eighteen")
- let fif=document.getElementById("nineteen")
- let six=document.getElementById("twenty")
- v.addEventListener("click",()=>{
-    
-    v.innerText="WRONG"
-    w.innerText="WRONG"
-    fif.innerText="THE CORRECT ANSWER IS C"
-    six.innerText="WRONG"
-
- })
-  w.addEventListener("click",()=>{
-    
-    v.innerText="WRONG"
-    w.innerText="WRONG"
-    fif.innerText="THE CORRECT ANSWER IS C"
-    six.innerText="WRONG"
-
- })
-  fif.addEventListener("click",()=>{
-    
-    v.innerText="WRONG"
-    w.innerText="WRONG"
-    fif.innerText="THE CORRECT ANSWER IS C"
-    six.innerText="WRONG"
-
- })
-  six.addEventListener("click",()=>{
-    
-    v.innerText="WRONG"
-    w.innerText="WRONG"
-    fif.innerText="THE CORRECT ANSWER IS C"
-    six.innerText="WRONG"
-
- })
- 
- 
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- let x=document.getElementById("dark")
-  let y=  document.getElementById("light")
-  let z=document.getElementById("change")
-  let p=document.getElementById("wee")
-  
-x.addEventListener('click',()=>{
-    document.body.classList.toggle("black")
-    if(document.body.classList.contains("black")){
-        z.innerText="light mode"
-        p.src="star-fill (1).svg"
+// Fetch questions from API
+async function loadQuestions() {
+  try {
+    const response = await fetch(apiURL);
+    if (!response.ok) throw new Error( "Network response was not ok" `(${response.status})`);
+    questions = await response.json();
+    // basic validation
+    if (!Array.isArray(questions) || questions.length === 0) {
+      throw new Error("API did not return an array of questions.");
     }
-    else{
-        z.innerText="dark mode"
-        p.src="emoji-sunglasses.svg"
-    }
-  
-})
+    showQuestion();
+  } catch (error) {
+    const qEl = document.getElementById("question");
+    if (qEl) qEl.textContent = "Error loading questions!";
+    console.error("loadQuestions error:", error);
+  }
+}
+
+// Display question + options
+function showQuestion() {
+  const questionBox = document.getElementById("question");
+  const optionsBox = document.getElementById("options");
+
+  if (!questionBox || !optionsBox) {
+    console.error("Required DOM elements (#question or #options) not found.");
+    return;
+  }
+
+  if (currentIndex < questions.length) {
+    const q = questions[currentIndex];
+    // Use backticks for template literals
+    questionBox.textContent = `Q${currentIndex + 1}. ${q.question}`;
+
+    // Clear old options
+    optionsBox.innerHTML = "";
+
+    // Create buttons for each option (safely handle if options missing)
+    (q.options || []).forEach(option => {
+      const btn = document.createElement("button");
+      btn.textContent = option;
+      btn.className = "option-btn";
+      btn.type = "button";
+      btn.addEventListener("click", () => checkAnswer(option, q.answer));
+      optionsBox.appendChild(btn);
+    });
+  } else {
+    // Use backticks here too
+    document.getElementById("quiz").innerHTML =
+      `<h2>🎉 Quiz Finished!</h2><p>Your score: ${score}/${questions.length}</p>`;
+  }
+}
+
+// Check answer
+function checkAnswer(selected, correct) {
+  if (selected === correct) {
+    score++;
+    document.getElementById("semo").textContent = "✅ Correct!";
+    // optionally show feedback on page instead of alert
+    // alert("✅ Correct!");
+  } else {
+    // alert(❌ Wrong! Correct answer: ${correct});
+    document.getElementById("semo").textContent =
+      `❌ Wrong! The correct answer was: ${correct}`;
+  }
+
+  currentIndex++;
+  showQuestion();
+}
+
+// Start
+loadQuestions();
